@@ -1,0 +1,6 @@
+font-size = 11
+font-family = "AdwaitaMono Nerd Font Mono"
+background-opacity = 0.75
+window-decoration = none
+gtk-custom-css = ~/.config/ghostty/rounded.css
+theme = Matugen

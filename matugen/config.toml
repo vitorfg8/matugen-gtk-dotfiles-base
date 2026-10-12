@@ -1,0 +1,33 @@
+# matugen config — drives GTK3, GTK4, GNOME Shell and Ghostty from the wallpaper.
+# Install: copy this whole repo's `matugen/` dir to ~/.config/matugen/
+# See README.md for the full setup.
+
+[config]
+# 0 = most dominant source color (avoids the interactive prompt)
+source_color_index = 0
+
+[config.wallpaper]
+# Wallpaper is managed by the desktop; matugen only generates colors.
+# `command` is required by the schema even when `set = false`.
+set = false
+command = "true"
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+post_hook = '~/.config/matugen/post-hook-scripts/gtk-themes-reload.sh'
+
+[templates.gnome-shell]
+input_path = '~/.config/matugen/templates/gnome-shell.css'
+output_path = '~/.local/share/themes/Material-Gnome/gnome-shell/gnome-shell.css'
+post_hook = "dconf write /org/gnome/shell/extensions/user-theme/name \"'default'\" && dconf write /org/gnome/shell/extensions/user-theme/name \"'Material-Gnome'\""
+
+[templates.ghostty]
+input_path = '~/.config/matugen/templates/ghostty'
+output_path = '~/.config/ghostty/themes/Matugen'
+post_hook = 'pkill -SIGUSR2 ghostty'

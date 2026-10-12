@@ -1,0 +1,7 @@
+window.ssd.no-border-radius:not(.maximized):not(.fullscreen):not(.tiled):not(.tiled-top):not(.tiled-right):not(.tiled-bottom):not(.tiled-left) {
+  border-radius: 12px;
+}
+
+window.ssd.no-border-radius:not(.maximized):not(.fullscreen):not(.tiled):not(.tiled-top):not(.tiled-right):not(.tiled-bottom):not(.tiled-left) > contents {
+  border-radius: 12px;
+}

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Material-Gnome
+Comment=A flat Gtk+ theme based on the Matugen color generator
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Material-Gnome
+MetacityTheme=Material-Gnome
+IconTheme=Adwaita
+CursorTheme=Adwaita
+ButtonLayout=close,minimize,maximize:menu

@@ -1,0 +1,1106 @@
+/* GNOME Shell — same structure as the Rewaita theme (SwordPuffin/Rewaita),
+ * with matugen template colors. Panel and app-launcher icon use primary_fixed
+ * (soft near-white tint of the accent). border-color=transparent (matches
+ * Rewaita with the window-borders option off). */
+/*window-fg-color: generic text color */
+/*window-bg-color: generic background color */
+/*border-color: accent color if window border is enabled*/
+/*card-bg-color: background color for buttons or items that need to contrast the background*/
+/*headerbar-bg-color: dark color for high contrast*/
+/*panel-bg-color: panel background color*/
+/*panel-fg-color: panel text color*/
+/*panel-button-bg-color: panel button background color*/
+/*overview-bg-color: always opaque background color*/
+
+/* Top Bar */
+#panel {
+  background-color: {{colors.surface_dim.default.hex}};
+  color: {{colors.primary_fixed.default.hex}} !important;
+  font-feature-settings: "tnum";
+}
+
+#panel .panel-button {
+  color: {{colors.primary_fixed.default.hex}} !important;
+}
+
+#panel .panel-button:hover,
+#panel .panel-button:hover.clock-display .clock {
+  background-color: alpha(currentColor, 0.2) !important;
+}
+
+#panel .workspace-dot {
+  background-color: {{colors.primary_fixed.default.hex}} !important;
+  color: {{colors.primary_fixed.default.hex}} !important;
+}
+
+.window-close {
+  background-color: {{colors.surface_dim.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+.window-close:hover {
+  background-color: {{colors.surface_container.default.hex}};
+}
+
+#dashtodockContainer #dash .dash-background, .dash-background {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+  border: 2px solid transparent;
+}
+
+#dashtodockContainer.extended #dash .dash-background  {
+  border: 0px solid transparent;
+}
+
+#dashtodockContainer.extended:overview #dash .dash-background {
+  background-color: {{colors.background.default.hex}};
+}
+
+#dash .dash-item-container .show-apps .overview-icon,
+#dash .dash-item-container .overview-tile .overview-icon,
+#dash .dash-item-container .grid-search-result .overview-icon {
+  color: {{colors.primary_fixed.default.hex}};
+  background-color: transparent;
+}
+
+#dash .dash-item-container .show-apps:hover .overview-icon,
+#dash .dash-item-container .overview-tile:hover .overview-icon,
+#dash .dash-item-container .grid-search-result:hover .overview-icon {
+  background-color: {{colors.surface_container.default.hex}};
+}
+
+#dash .dash-item-container .show-apps:active .overview-icon,
+#dash .dash-item-container .overview-tile:active .overview-icon,
+#dash .dash-item-container .grid-search-result:active .overview-icon {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+#dash .dash-item-container .app-well-app-running-dot,
+#dash .dash-item-container .app-grid-running-dot {
+  background-color: {{colors.primary.default.hex}};
+}
+
+/* Tiled window previews */
+.tile-preview {
+  background-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.5);
+  border: 1px solid {{colors.primary.default.hex}};
+}
+
+/* Overview stuff */
+.workspace-animation, #overviewGroup {
+  background-color: {{colors.background.default.hex}};
+}
+
+.icon-grid .overview-tile:hover, .grid-search-result:hover, .overview-tile:focus, .grid-search-result:focus, .overview-tile:selected, .grid-search-result:selected {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+  background-image: none;
+}
+
+.list-search-result-title, .list-search-provider-details {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.list-search-result-description {
+  color: {{colors.on_surface.default.hex}};
+  font-weight: 300;
+}
+
+.list-search-result:hover, .list-search-result:selected, .list-search-result:focus,
+.search-provider-icon:hover, .search-provider-icon:focus, .search-section *:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.page-indicator-icon {
+  background-color: {{colors.on_surface.default.hex}};
+}
+
+.page-navigation-arrow {
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.page-navigation-arrow > StIcon {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.page-navigation-arrow:hover {
+  background-color: {{colors.surface_container.default.hex}};
+}
+
+.search-section-content  {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.app-folder {
+  background-color: {{colors.surface_container_high.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+.app-folder .overview-icon {
+  background-color: transparent;
+}
+
+.app-folder:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+  color: {{colors.on_surface.default.hex}};
+}
+
+.app-folder:active {
+  background-color: {{colors.surface_container_high.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+.app-folder-dialog {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_dim.default.hex}};
+  border: 2px transparent;
+}
+
+.app-grid-running-dot {
+  background-color: {{colors.primary.default.hex}};
+}
+
+.arcmenu-button {
+  background-color: {{colors.surface_container_high.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+.workspace-thumbnails .workspace-thumbnail {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.workspace-thumbnail-indicator {
+  border: 3px solid {{colors.primary.default.hex}};
+}
+
+.event-time {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.cycler-highlight {
+  border: 5px solid {{colors.primary.default.hex}};
+}
+
+.switcher-list .item-box {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.switcher-list .item-box:hover, .switcher-list .item-box:selected {
+  background-color: {{colors.surface_container.default.hex}};
+}
+
+/* screenshot-ui */
+.screenshot-ui-close-button {
+  background-color: {{colors.surface_container_high.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+.screenshot-ui-close-button:hover {
+  background-color: {{colors.surface_container.default.hex}};
+}
+
+.screenshot-ui-capture-button {
+  border: 4px {{colors.on_surface.default.hex}};
+  padding: 4px;
+}
+
+.screenshot-ui-capture-button .screenshot-ui-capture-button-circle {
+  background-color: {{colors.on_surface.default.hex}};
+}
+
+.screenshot-ui-capture-button:cast .screenshot-ui-capture-button-circle {
+  background-color: {{colors.primary.default.hex}};
+}
+
+.screenshot-ui-show-pointer-button, .screenshot-ui-type-button {
+  background-color: transparent;
+  color: {{colors.on_surface.default.hex}};
+}
+
+.screenshot-ui-type-button:checked {
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.screenshot-ui-show-pointer-button:hover, .screenshot-ui-type-button:hover {
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.screenshot-ui-show-pointer-button:active, .screenshot-ui-type-button:active {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+.screenshot-ui-window-selector {
+  background-color: {{colors.background.default.hex}};
+}
+
+.screenshot-ui-window-selector-window:hover .screenshot-ui-window-selector-window-border {
+  border-color: rgba({{colors.primary.default.red}}, {{colors.primary.default.green}}, {{colors.primary.default.blue}}, 0.5);
+}
+
+.screenshot-ui-window-selector-window:checked .screenshot-ui-window-selector-window-border {
+  border-color: {{colors.primary.default.hex}};
+}
+
+.screenshot-ui-window-selector-window:checked .screenshot-ui-window-selector-check {
+  background-color: {{colors.primary.default.hex}};
+  color: {{colors.on_primary.default.hex}};
+}
+
+.search-entry,
+StEntry {
+  background-color: {{colors.surface_container_high.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+StLabel.hint-text:insensitive, .overview-tile {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.search-entry:focus,
+StEntry:focus {
+  background-color: {{colors.surface_container.default.hex}};
+}
+
+/* Popovers/Menus */
+.popup-menu-boxpointer {
+  -arrow-background-color: transparent;
+  -arrow-border-color: transparent;
+  background: transparent;
+}
+
+.vhandle {
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.popup-menu {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.popup-menu .popup-menu-content {
+  background-color: {{colors.surface_dim.default.hex}};
+  border: 2px transparent;
+}
+
+.popup-menu .popup-menu-item {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.popup-inactive-menu-item:insensitive {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.popup-menu .popup-menu-item:checked, .popup-menu-item:active {
+  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.popup-menu .popup-menu-item:checked:focus, .popup-menu .popup-menu-item:checked:hover, .popup-menu .popup-menu-item:checked.selected {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.popup-menu .popup-menu-item:checked:active {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.popup-menu .popup-menu-item:checked:insensitive {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.popup-menu .popup-menu-item:focus, .popup-menu .popup-menu-item:hover, .popup-menu .popup-menu-item.selected {
+  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+}
+
+.popup-menu .popup-menu-item:active, .popup-menu .popup-menu-item.selected:active {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.popup-menu .popup-menu-item:insensitive {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.popup-menu .popup-sub-menu, .popup-sub-menu, .popup-submenu-menu-item:open, .popup-menu .popup-sub-menu .popup-menu-item:open {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.popup-menu .popup-sub-menu .popup-menu-item:focus, .popup-menu .popup-sub-menu .popup-menu-item:hover, .popup-menu .popup-sub-menu .popup-menu-item.selected {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+.popup-menu .popup-sub-menu .popup-menu-item:active, .popup-menu .popup-sub-menu .popup-menu-item.selected:active {
+   color: {{colors.on_surface.default.hex}} !important;
+   background-color: {{colors.surface_container_high.default.hex}} !important;
+}
+
+.popup-menu .popup-sub-menu .popup-menu-item:insensitive {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.popup-menu .popup-inactive-menu-item {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.popup-menu .popup-inactive-menu-item:insensitive {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.quick-settings .icon-button, .quick-settings .message-notification-group .message-collapse-button, .message-notification-group .quick-settings .message-collapse-button, .quick-settings .message .message-header .message-expand-button, .message .message-header .quick-settings .message-expand-button,
+.quick-settings .message .message-header .message-close-button,
+.message .message-header .quick-settings .message-close-button, .quick-settings .button {
+  background-color: {{colors.surface_container_high.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+.quick-settings .icon-button > StIcon, .quick-settings .message-notification-group .message-collapse-button > StIcon, .message-notification-group .quick-settings .message-collapse-button > StIcon, .quick-settings .message .message-header .message-expand-button > StIcon, .message .message-header .quick-settings .message-expand-button > StIcon,
+.quick-settings .message .message-header .message-close-button > StIcon,
+.message .message-header .quick-settings .message-close-button > StIcon {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.quick-toggle, .quick-toggle-has-menu {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+  border: none;
+  outline: none;
+}
+
+.quick-toggle {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+}
+
+.quick-toggle:hover {
+  background-color: {{colors.surface_container.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.quick-toggle:active {
+  background-color: {{colors.surface_container.default.hex}} !important;
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+.quick-toggle:checked {
+  background-color: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+
+.quick-toggle:checked:hover {
+  background-color: {{colors.surface_container.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}};
+}
+
+.quick-toggle:checked:active {
+  background-color: {{colors.surface_container.default.hex}} !important;
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+.quick-toggle.button {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.quick-toggle.button:checked:hover {
+  background-color: {{colors.primary.default.hex}} !important;
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+  color: {{colors.on_primary.default.hex}} !important;
+}
+
+.quick-toggle-has-menu, .quick-toggle-has-menu .quick-toggle-separator {
+  background-color: transparent !important;
+  /* opacity: 0.1 !important; */
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button {
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:hover {
+  background-color: {{colors.surface_container.default.hex}} !important;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:active {
+  background-color: {{colors.surface_container.default.hex}} !important;
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:checked {
+  background-color: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+  box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.12) !important;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:checked:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3) !important;
+  color: {{colors.surface_dim.default.hex}} !important;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:checked:active {
+  background-color: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+
+.device-subtitle {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.slider {
+  color: {{colors.on_surface.default.hex}} !important;
+  -barlevel-background-color: {{colors.surface_container_high.default.hex}};
+  -barlevel-active-background-color: {{colors.primary.default.hex}};
+}
+
+.quick-toggle-menu-button.icon-button:last-child > StIcon {
+  color: {{colors.on_surface.default.hex}};
+}
+
+
+.quick-toggle-menu-button.icon-button:last-child:checked > StIcon,
+.quick-toggle-menu-button.icon-button:last-child:checked:hover > StIcon {
+  color: {{colors.on_primary.default.hex}} !important;
+}
+
+.quick-slider .icon-button, .quick-slider .message-notification-group .message-collapse-button, .message-notification-group .quick-slider .message-collapse-button, .quick-slider .message .message-header .message-expand-button, .message .message-header .quick-slider .message-expand-button,
+.quick-slider .message .message-header .message-close-button,
+.message .message-header .quick-slider .message-close-button {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.quick-slider .icon-button:hover, .quick-slider .message-notification-group .message-collapse-button:hover, .message-notification-group .quick-slider .message-collapse-button:hover, .quick-slider .message .message-header .message-expand-button:hover, .message .message-header .quick-slider .message-expand-button:hover,
+.quick-slider .message .message-header .message-close-button:hover,
+.message .message-header .quick-slider .message-close-button:hover {
+  background-color: {{colors.surface_container.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+.quick-slider .icon-button:active, .quick-slider .message-notification-group .message-collapse-button:active, .message-notification-group .quick-slider .message-collapse-button:active, .quick-slider .message .message-header .message-expand-button:active, .message .message-header .quick-slider .message-expand-button:active,
+.quick-slider .message .message-header .message-close-button:active,
+.message .message-header .quick-slider .message-close-button:active {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.3);
+  /* background-color: {{colors.surface_dim.default.hex}}; */
+}
+
+.icon-button {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.icon-button:hover {
+  background-color: {{colors.surface_container.default.hex}} !important;
+}
+
+.icon-button:active {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2) !important;
+}
+
+.title, .popup-menu-item {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.quick-toggle-menu {
+  background-color: {{colors.surface_dim.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}};
+}
+
+.quick-toggle-menu .popup-menu-item:focus, .quick-toggle-menu .popup-menu-item:hover, .quick-toggle-menu .popup-menu-item.selected {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container.default.hex}} !important;
+}
+
+.quick-toggle-menu .popup-menu-item:active {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+  background-color: {{colors.surface_container.default.hex}} !important;
+}
+
+.quick-toggle-menu .popup-menu-item:active > StLabel {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.power-item {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.quick-settings-system-item .power-item:insensitive {
+  background-color: transparent;
+}
+
+.icon {
+  background-color: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+
+/* On-Screen Keyboard */
+#keyboard {
+  background-color: {{colors.surface_dim.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.keyboard-key  {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.keyboard-subkeys-boxpointer {
+  -arrow-background-color: {{colors.surface_dim.default.hex}} !important;
+  -arrow-border-width: 0;
+}
+
+.keyboard-key:focus, .keyboard-key:hover {
+  background-color: {{colors.surface_container.default.hex}} !important;
+}
+
+.keyboard-key:active {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1) !important;
+}
+
+.keyboard-key.shift-key-uppercase,
+.keyboard-key.shift-key-uppercase:focus,
+.keyboard-key.shift-key-uppercase:hover,
+.keyboard-key.shift-key-uppercase:checked,
+.keyboard-key.shift-key-uppercase:active {
+  color: {{colors.primary.default.hex}} !important;
+}
+
+.word-suggestions {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.word-suggestions > StButton:hover {
+  background-color: {{colors.surface_container.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+/* Calendar */
+.calendar {
+  background-color: transparent !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.calendar .calendar-month-label,
+.calendar .calendar-month-header {
+  color: {{colors.on_surface.default.hex}} !important;
+  background-color: transparent !important;
+}
+
+.calendar .pager-button {
+  background-color: transparent !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.calendar .pager-button:active,
+.calendar .pager-button:hover,
+.calendar .pager-button:focus {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+}
+
+.calendar .calendar-day {
+  color: {{colors.on_surface.default.hex}} !important;
+  font-feature-settings: "tnum";
+  background-color: transparent !important;
+}
+
+.calendar .calendar-day:hover, .calendar .calendar-day:focus {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.calendar .calendar-day:active {
+  background-color: {{colors.surface_container.default.hex}} !important;
+}
+
+.calendar .calendar-day.calendar-weekend,
+.calendar .calendar-day,
+.calendar .calendar-nonwork-day,
+.calendar .calendar-day-top,
+.calendar .calendar-day-left,
+.calendar .calendar-day-with-events .calendar-work-day {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.calendar .calendar-day:selected,
+.calendar .calendar-today:focus,
+.calendar .calendar-today:selected {
+  background-color: {{colors.primary.default.hex}} !important;
+  color: {{colors.on_primary.default.hex}} !important;
+}
+
+/* .calendar .calendar-day-with-events { */
+/*   color: {{colors.on_surface.default.hex}}; */
+/*   background-image: url("resource:///org/gnome/shell/theme/calendar-today-light.svg") !important; */
+/* } */
+
+.calendar .calendar-other-month,
+.calendar .calendar-other-month.calendar-weekend {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.calendar .calendar-day-heading {
+  background-color: transparent !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.calendar .calendar-week-number {
+  background-color: {{colors.surface_container_high.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+  font-feature-settings: "tnum";
+}
+
+.weather-header:insensitive, .world-clocks-header:insensitive, .event-placeholder:insensitive, .events-title {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.world-clocks-timezone:insensitive {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.notification,
+.notification-banner {
+  background-color: {{colors.surface_container_high.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+/* .notification:hover, */
+/* .notification-banner:hover { */
+/*   background-color: {{colors.surface_container_high.default.hex}}; */
+/*   color: {{colors.on_surface.default.hex}}; */
+/* } */
+
+.date-menu .notification-icon,
+.date-menu .system-status-icon {
+    color: {{colors.on_surface.default.hex}};
+}
+
+.notification-button {
+    box-shadow: inset 0 0 100px 100px rgba(140, 140, 140, 0.2);
+    background-color: {{colors.surface_container_high.default.hex}};
+    color: {{colors.on_surface.default.hex}};
+}
+
+.notification-button:hover {
+    background-color: {{colors.primary.default.hex}};
+    color: {{colors.on_primary.default.hex}};
+}
+
+.message-list-clear-button {
+    color: {{colors.on_surface.default.hex}};
+    background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.message-expand-button {
+    color: {{colors.on_surface.default.hex}};
+    background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.message-expand-button:hover {
+    color: {{colors.on_primary.default.hex}};
+    background-color: {{colors.primary.default.hex}};
+}
+
+.datemenu-today-button {
+  background: none !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+/* Date/Time Menu */
+.world-clocks-button,
+.weather-button,
+.events-button {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+  border: none !important;
+}
+
+.world-clocks-button:hover,
+.weather-button:hover,
+.events-button:hover, .world-clocks-button:focus,
+.weather-button:focus,
+.events-button:focus {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.world-clocks-button:active,
+.weather-button:active,
+.events-button:active {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.screenshot-ui-panel, .workspace-switcher-container, .switcher-list, .resize-popup, .osd-window {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_dim.default.hex}};
+  border: 2px transparent;
+}
+
+.osd-window {
+  background-color: {{colors.surface_dim.default.hex}};
+}
+
+.osd-window .level {
+  background-color: {{colors.surface_dim.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+  -barlevel-background-color: {{colors.surface_container_high.default.hex}};
+  -barlevel-active-background-color: {{colors.primary.default.hex}};
+  -barlevel-overdrive-color: {{colors.error.default.hex}};
+  -barlevel-overdrive-separator-width: 2px;
+  -barlevel-border-width: 0;
+  -barlevel-border-color: {{colors.surface_dim.default.hex}};
+}
+
+.osd-window .level-bar {
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.pad-osd-window {
+  background-color: {{colors.surface_dim.default.hex}};
+}
+
+.message-list {
+  background-color: transparent;
+  color: {{colors.on_surface.default.hex}} !important;
+  outline: none;
+  border-right: 1px solid {{colors.on_surface.default.hex}} !important;
+}
+
+.toggle-switch {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.toggle-switch:checked {
+  background-color: {{colors.primary.default.hex}};
+}
+
+.message {
+  background-color: {{colors.surface_container_high.default.hex}};
+  border: none !important;
+}
+
+.message:second-in-stack {
+  box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1) !important;
+}
+
+.message:lower-in-stack {
+  box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.2) !important;
+}
+
+.message-list-placeholder,
+.message-header,
+.message-body,
+.message-icon,
+.message-title {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.message-close-button {
+  background-color: {{colors.primary.default.hex}};
+  color: {{colors.on_primary.default.hex}};
+}
+
+.message-media-control {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.message-media-control:hover, .message-media-control:focus {
+  background-color: {{colors.primary.default.hex}};
+  color: {{colors.on_primary.default.hex}};
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button, .lg-obj-inspector-button, #LookingGlassDialog > #Toolbar .lg-toolbar-button, .candidate-page-button, .message .message-header .flat.message-expand-button,
+.message .message-header .flat.message-close-button, .message-notification-group .flat.message-collapse-button {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.modal-dialog .modal-dialog-button-box .modal-dialog-button:hover, .lg-obj-inspector-button:hover, #LookingGlassDialog > #Toolbar .lg-toolbar-button:hover, .icon-button.flat:hover, .message .message-header .flat.message-expand-button:hover,
+.message .message-header .flat.message-close-button:hover, .message-notification-group .flat.message-collapse-button:hover, .button.flat:hover, .popup-menu .button:hover {
+  color: {{colors.on_primary.default.hex}};
+  background-color: {{colors.primary.default.hex}};
+}
+
+.candidate-popup-text, .candidate-index {
+  color: {{colors.on_surface.default.hex}};
+}
+
+.candidate-popup-content {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_dim.default.hex}};
+  border: 2px solid transparent;
+}
+
+.candidate-box:hover {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.candidate-box:selected, .candidate-box:selected > .candidate-index {
+  color: {{colors.on_primary.default.hex}};
+  background-color: {{colors.primary.default.hex}};
+}
+
+.candidate-page-button:hover {
+  background-color: {{colors.surface_container.default.hex}};
+}
+
+.modal-dialog {
+  background-color: {{colors.surface_dim.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+.icon-button:last-child {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.icon-button:last-child:hover {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container.default.hex}};
+}
+
+/* Login Dialog */
+#lockDialogGroup {
+  background-color: {{colors.surface_dim.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.login-dialog,
+.unlock-dialog {
+  background-color: transparent !important;
+}
+
+.login-dialog StEntry,
+.unlock-dialog > StEntry,
+.login-dialog > StEntry,
+.unlock-dialog > StEntry {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.login-dialog StEntry:focus,
+.unlock-dialog StEntry:focus {
+  background-color: {{colors.surface_container.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+.login-dialog StEntry StLabel.hint-text,
+.unlock-dialog StEntry StLabel.hint-text {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.login-dialog .modal-dialog-button,
+.unlock-dialog .modal-dialog-button {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.login-dialog .modal-dialog-button:hover,
+.login-dialog .modal-dialog-button:focus,
+.unlock-dialog .modal-dialog-button:hover,
+.unlock-dialog .modal-dialog-button:focus {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_dim.default.hex}};
+}
+
+.login-dialog .modal-dialog-button:active,
+.unlock-dialog .modal-dialog-button:active {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.login-dialog .modal-dialog-button:insensitive,
+.unlock-dialog .modal-dialog-button:insensitive,
+.login-dialog .modal-dialog-button:default,
+.unlock-dialog .modal-dialog-button:default {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+}
+
+.login-dialog .modal-dialog-button:default:hover,
+.login-dialog .modal-dialog-button:default:focus,
+.unlock-dialog .modal-dialog-button:default:hover,
+.unlock-dialog .modal-dialog-button:default:focus {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container.default.hex}};
+}
+
+.login-dialog .modal-dialog-button:default:active,
+.unlock-dialog .modal-dialog-button:default:active {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.login-dialog .modal-dialog-button:default:insensitive,
+.unlock-dialog .modal-dialog-button:default:insensitive {
+  color: {{colors.on_surface.default.hex}};
+  background-color: {{colors.surface_container_high.default.hex}};
+}
+
+.login-dialog .cancel-button,
+.login-dialog .switch-user-button,
+.login-dialog .login-dialog-session-list-button,
+.unlock-dialog .cancel-button,
+.unlock-dialog .switch-user-button,
+.unlock-dialog .login-dialog-session-list-button {
+  background-color: {{colors.surface_container_high.default.hex}};
+  color: {{colors.on_surface.default.hex}};
+}
+
+
+.login-dialog .cancel-button:hover,
+.login-dialog .switch-user-button:hover,
+.login-dialog .login-dialog-session-list-button:hover,
+.unlock-dialog .cancel-button:hover,
+.unlock-dialog .switch-user-button:hover,
+.unlock-dialog .login-dialog-session-list-button:hover {
+  background-color: {{colors.surface_container.default.hex}};
+}
+
+.login-dialog .login-dialog-message-warning,
+.unlock-dialog .login-dialog-message-warning {
+  color: {{colors.on_surface.default.hex}};
+}
+
+/* .login-dialog-button * { */
+/*   background-color: {{colors.on_surface.default.hex}}; */
+/*   color: {{colors.surface_container_high.default.hex}}; */
+/* } */
+
+/* .login-dialog-button *:hover { */
+/*   background-color: {{colors.surface_container.default.hex}}; */
+/* } */
+
+.login-dialog-banner {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.login-dialog-not-listed-button {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.login-dialog-not-listed-button:focus,
+.login-dialog-not-listed-button:hover {
+  color: {{colors.on_surface.default.hex}} !important;
+  background-color: {{colors.surface_container.default.hex}} !important;
+}
+
+/* .login-dialog-not-listed-button:hover { */
+/*   color: {{colors.on_surface.default.hex}}; */
+/*   background: {{colors.surface_container.default.hex}}; */
+/* } */
+
+.login-dialog-user-list:expanded .login-dialog-user-list-item:selected,
+.login-dialog-user-list:expanded .login-dialog-user-list-item:hover,
+.login-dialog-user-list:expanded .login-dialog-user-list-item:active {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.login-dialog-not-listed-button:active,
+.login-dialog-user-list-item:active,
+.login-dialog-user-list-item:focus:active,
+.login-dialog-user-list-item:insensitive:active {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1) !important;
+}
+
+.login-dialog-user-list-item,
+.login-dialog-user-list-item:default,
+.login-dialog-user-list-item:insensitive {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+/* .login-dialog-user-list-item:focus { */
+/*   background-color: {{colors.surface_container.default.hex}} !important; */
+/* } */
+
+.login-dialog-user-list-item:hover, .login-dialog-user-list-item:focus:hover {
+  background-color: {{colors.surface_container.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+/* .login-dialog-user-list-item:active, .login-dialog-user-list-item:focus:active { */
+/*   background-color: {{colors.surface_dim.default.hex}} !important; */
+/*   color: {{colors.on_surface.default.hex}} !important; */
+/* } */
+
+.login-dialog-user-list-item .login-dialog-timed-login-indicator {
+  background-color: {{colors.surface_dim.default.hex}} !important;
+}
+
+.user-widget-label {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+*.a11y-button {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+*.a11y-button:hover {
+  background-color: {{colors.surface_container.default.hex}} !important;
+}
+
+.login-dialog-message-hint,
+.login-dialog-prompt-label,
+.caps-lock-warning-label {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.audio-selection-device-box {
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+.audio-selection-device:hover {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+}
+
+.tiling-menu-container > StBoxLayout {
+  background-color: {{colors.surface_container_high.default.hex}} !important;
+  color: {{colors.on_surface.default.hex}} !important;
+}
+
+/* Map: window-bg=surface_dim, window-fg/search-fg/color-fg=on_surface,
+ * card-bg=surface_container_high, headerbar-bg=surface_container,
+ * accent/accent-fg=primary/on_primary, accent-transparent=rgba(primary,.5),
+ * border=transparent, overview-bg=background, panel-bg=surface_dim,
+ * panel-fg/show-apps=primary_fixed, red-1=error. */
+
+/* Squarish rounded toggles (matches the Rewaita no-pills option).
+ * Static CSS: holds for any future palette. */
+#panel .panel-button, .search-entry, .clock {
+  border-radius: 12px;
+}
+
+.quick-toggle, .quick-toggle-has-menu {
+  border-radius: 12px;
+}
+
+.quick-toggle-has-menu .quick-toggle {
+  min-width: auto;
+  max-width: auto;
+}
+
+.quick-toggle-has-menu .quick-toggle:ltr {
+  border-radius: 12px 0 0 12px;
+}
+
+.quick-toggle-has-menu .quick-toggle:rtl {
+  border-radius: 0 12px 12px 0;
+}
+
+.quick-toggle-has-menu .quick-toggle:ltr:last-child {
+  border-radius: 12px;
+}
+
+.quick-toggle-has-menu .quick-toggle:rtl:last-child {
+  border-radius: 12px;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:ltr {
+  border-radius: 0 12px 12px 0;
+}
+
+.quick-toggle-has-menu .quick-toggle-menu-button:rtl {
+  border-radius: 12px 0 0 12px;
+}
